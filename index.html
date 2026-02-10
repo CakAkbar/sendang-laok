@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <title>DESA JUKONG KECAMATAN LABANG</title>
+  <meta name="title" content="KECAMATAN LABANG DESA JUKONG">
+
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style1.css">
+
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+</head>
+
+<body>
+
+  <header class="header" data-header style="background-color: rgb(56, 60, 84);">
+    <div class="container">
+
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="logo Desa Jukong" class="logo-light">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="logo Desa Jukong" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="/" class="logo">
+            <img src="./assets/images/logo.png" width="74" height="24" alt="logo utama Desa Jukong">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="/" class="navbar-link">Home</a></li>
+          <li><a href="profil.html" class="navbar-link">Profil</a></li>
+          <li><a href="struktur.html" class="navbar-link">struktur</a></li>
+          <li><a href="surat.html" class="navbar-link">layanan</a></li>
+          <li><a href="kontak.html" class="navbar-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="section hero has-bg-image" aria-label="home" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">DESA JUKONG KECAMATAN LABANG</h1>
+            <p class="hero-text">Desa Agraris yang indah dan asri </p>
+
+            <div class="btn-wrapper">
+              <a href="https://www.google.com/maps/place/Jukong,+Kec.+Labang,+Kabupaten+Bangkalan,+Jawa+Timur/@-7.1350047,112.7543336,14.41z/data=!4m6!3m5!1s0x2dd803a85951e069:0x727dbd4593b3fefb!8m2!3d-7.1327918!4d112.7599036!16s%2Fg%2F120ldkdx?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" class="btn btn-primary">PETA DESA</a>
+              <a href="https://wa.me/+6282332921583" class="btn btn-outline">HUBUNGI KAMI</a>
+            </div>
+          </div>
+
+          <div class="hero-slider" data-slider>
+            <div class="slider-inner">
+              <ul class="slider-container" data-slider-container>
+                <li class="slider-item">
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/B1.jpg" width="575" height="550" alt="Ladang pertanian Desa Jukong" class="img-cover">
+                  </figure>
+                </li>
+
+                <li class="slider-item">
+                  <div class="hero-card">
+                    <figure class="img-holder" style="--width: 575; --height: 550;">
+                      <img src="./assets/images/B2.jpg" width="575" height="550" alt="Aktivitas nelayan Desa Jukong" class="img-cover">
+                    </figure>
+                    <button class="play-btn" aria-label="play intro Desa Jukong">
+                      <ion-icon name="play" aria-hidden="true"></ion-icon>
+                    </button>
+                  </div>
+                </li>
+
+                <li class="slider-item">
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/images/B3.jpg" width="575" height="550" alt="Panen tembakau Desa Jukong" class="img-cover">
+                  </figure>
+                </li>
+              </ul>
+            </div>
+
+            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+
+            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section service" aria-labelledby="service-label">
+        <div class="container">
+          <p class="section-subtitle" id="service-label">Potensi Desa Kami</p>
+          <h2 class="h2 section-title">Desa unggulan Pertanian </h2>
+          <p class="section-text">
+            Desa Jukong merupakan desa agraris dengan mayoritas penduduk bekerja sebagai petani . 
+            Kami memiliki komoditas unggulan seperti jagung, kacang dan padi yang ditanam secara musiman.
+          </p>
+          <br>
+
+          <section class="hero-slider">
+            <div class="slider-container">
+              <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/images/d1.jpg');">
+                <div class="slide-content">
+                  <h3>Pertanian jagung</h3>
+                  <p>
+                    padi dan jagung menjadi komoditas utama Desa jukong. 
+                    Ditanam secara turun-temurun dengan metode tradisional, jagung kami dikenal memiliki kualitas terbaik di wilayah Madura.
+                  </p>
+                </div>
+              </div>
+
+              <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./assets/images/d2.jpg');">
+                <div class="slide-content">
+                  <h3>Hasil Laut Segar</h3>
+                  <p>
+                    Sebagian warga bekerja sebagai nelayan tradisional, menghasilkan ikan, udang, dan kepiting segar 
+                    yang ditangkap dengan metode ramah lingkungan menggunakan perahu tradisional.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </section>
+          <br>
+
+          <p class="section-subtitle">Kegiatan Utama Desa</p>
+          <br>
+          <h2 class="h2 section-title">Aktivitas Masyarakat Desa Jukong</h2>
+
+          <ul class="grid-list">
+            <li>
+              <div class="service-card">
+                <div class="card-icon" style="text-align: center; margin-bottom: 20px;">
+                  <img src="https://img.icons8.com/?size=100&id=47584&format=png&color=000000" alt="Ikon Pertanian" style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h3 class="h4 card-title">PERTANIAN</h3>
+                <p class="card-text">
+                  Budidaya tembakau, jagung, dan kacang tanah dengan sistem musiman dan pola tanam tradisional.
+                </p>
+                <a href="#" class="btn-text">
+                  <span class="span">Selengkapnya</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <div class="card-icon" style="text-align: center; margin-bottom: 20px;">
+                  <img src="https://img.icons8.com/?size=100&id=96474&format=png&color=000000" alt="Ikon Kegiatan" style="width: 50px; height: 50px; object-fit: contain;">
+                </div>
+                <h3 class="h4 card-title">KEGIATAN SOSIAL</h3>
+                <p class="card-text">
+                  Program pemberdayaan melalui kelompok tani, BUMDes, dan kegiatan posyandu.
+                </p>
+                <a href="#" class="btn-text">
+                  <span class="span">Selengkapnya</span>
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="about" aria-labelledby="about-label">
+        <div class="container">
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="800" height="580" loading="lazy" alt="Kehidupan Desa Jukong" class="w-100">
+          </figure>
+
+          <div class="about-content">
+            <p class="section-subtitle" id="about-label">Tentang Kami</p>
+            <h2 class="h2 section-title">Desa Jukong Kecamatan Labang</h2>
+
+            <ul>
+              <li class="about-item">
+                <div class="accordion-card expanded" data-accordion>
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+                      <span class="span h5">Apa komoditas utama Desa Jukong?</span>
+                    </button>
+                  </h3>
+                  <div class="accordion-content">
+                    <p>Komoditas utama Desa Jukong:</p>
+                    <ul>
+                      <li>padi </li>
+                      <li>Jagung dan kacang tanah</li>
+                      <li>Hasil laut seperti ikan dan udang</li>
+                      <li>Kerajinan daun lontar</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+                      <span class="span h5">Bagaimana sistem pertanian di Desa Jukong?</span>
+                    </button>
+                  </h3>
+                  <div class="accordion-content">
+                    <p>Sistem pertanian kami:</p>
+                    <ul>
+                      <li>Pola tanam musiman</li>
+                      <li>Gabungan metode tradisional dan modern</li>
+                      <li>Pengelolaan air secara efisien</li>
+                      <li>Kelompok tani yang solid</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+                      <span class="span h5">Apa saja kegiatan nelayan Desa Jukong?</span>
+                    </button>
+                  </h3>
+                  <div class="accordion-content">
+                    <p>Kegiatan nelayan kami:</p>
+                    <ul>
+                      <li>Melaut pagi hari dengan perahu tradisional</li>
+                      <li>Penangkapan ikan dengan jaring dan pancing</li>
+                      <li>Pemrosesan hasil tangkapan secara tradisional</li>
+                      <li>Pemasaran ke pasar lokal</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+                      <span class="span h5">Bagaimana kehidupan sosial masyarakat?</span>
+                    </button>
+                  </h3>
+                  <div class="accordion-content">
+                    <p>Kehidupan sosial Desa Jukong:</p>
+                    <ul>
+                      <li>Gotong royong masih sangat kuat</li>
+                      <li>Kegiatan keagamaan yang rutin</li>
+                      <li>Kelompok usaha bersama</li>
+                      <li>Pendidikan anak usia dini</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+          <figure class="feature-banner">
+            <img src="./assets/images/d4.jpg" width="800" height="531" loading="lazy" alt="Potensi Desa Jukong" class="w-100">
+          </figure>
+
+          <div class="feature-content">
+            <p class="section-subtitle" id="feature-label">Profil Desa</p>
+            <h2 class="h2 section-title">Desa Jukong: Kehidupan Agraris yang Harmonis</h2>
+            <p class="section-text">
+              Desa Jukong merupakan desa pertanian dan nelayan tradisional di Kecamatan LABANG, Kabupaten BANGKALAN. 
+              Dengan mayoritas penduduk bekerja sebagai petani tembakau dan nelayan, kehidupan masyarakat kami sangat erat 
+              dengan alam dan tradisi leluhur.
+
+              Kami bangga dengan sistem pertanian musiman yang telah diwariskan turun-temurun, serta metode penangkapan ikan 
+              tradisional yang ramah lingkungan. Gotong royong dan nilai-nilai kekeluargaan masih sangat kental dalam kehidupan 
+              sehari-hari masyarakat Desa Jukong.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="our stats">
+        <div class="container">
+          <ul class="stats-card has-bg-image" style="background-image: url('./assets/images/stats-bg.jpg')">
+            <li>
+              <p class="card-text">
+                <span class="h1">3.894</span>
+                <span class="span">Jiwa Penduduk</span>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1">1.915</span>
+                <span class="span">Laki - Laki</span>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1">1979</span>
+                <span class="span">Perempuan</span>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1">877.9 Ha</span>
+                <span class="span">Luas wilayah </span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section project" aria-labelledby="project-label">
+        <div class="container">
+          <h2 class="h2 section-title">Galeri Desa Jukong</h2>
+          <h3 class="section-title">Potret Kehidupan Masyarakat</h3>
+
+          <ul class="grid-list">
+            <li>
+              <div class="project-card">
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/B1.jpg" width="560" height="350" loading="lazy" alt="Ladang Tembakau" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3"><a href="#" class="card-title">PERTANIAN</a></h3>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/B2.jpg" width="560" height="350" loading="lazy" alt="Aktivitas Nelayan" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3"><a href="#" class="card-title">PERIKANAN</a></h3>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/B3.jpg" width="560" height="350" loading="lazy" alt="Kerajinan Lontar" class="img-cover">
+                </figure>
+                <div class="card-content">
+                  <h3 class="h3"><a href="#" class="card-title">KERAJINAN</a></h3>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+          <h2 class="h2 section-title">DESA JUKONG KECAMATAN LABANG</h2>
+          <a href="https://maps.app.goo.gl/djdnKoq2iSVSbq9P8" class="btn btn-primary">LIHAT PETA DESA</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script1.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

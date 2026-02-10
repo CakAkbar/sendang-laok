@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <title>Kontak - DESA JUKONG KECAMATAN LABANG</title>
+  <meta name="title" content="Kontak - KECAMATAN LABANG DESA JUKONG">
+
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style1.css">
+
+  <style>
+    /* Modern contact page styling */
+    :root {
+      --primary-color: #383c54;
+      --secondary-color: #4a6fa5;
+      --accent-color: #ff7e5f;
+      --light-color: #f8f9fa;
+      --dark-color: #212529;
+      --gray-color: #6c757d;
+      --border-radius: 12px;
+      --box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    
+    .contact-section {
+      padding: 4rem 0;
+    }
+    
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .contact-info {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+    
+    .contact-info h2 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    
+    .contact-info h3 {
+      color: var(--primary-color);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .contact-info p, .contact-lines {
+      color: var(--gray-color);
+      line-height: 1.6;
+    }
+    
+    .contact-lines div {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .label {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .contact-info a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .contact-info a:hover {
+      color: var(--accent-color);
+      text-decoration: underline;
+    }
+    
+    hr {
+      border: none;
+      height: 1px;
+      background-color: rgba(0,0,0,0.1);
+      margin: 1.5rem 0;
+    }
+    
+    .social-list a:hover {
+      background: rgba(74, 111, 165, 0.1);
+      transform: translateX(5px);
+    }
+    
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+    }
+    
+    .contact-form h3 {
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+    
+    .contact-form label {
+      display: block;
+      margin-bottom: 1rem;
+      color: var(--dark-color);
+      font-weight: 500;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      margin-top: 0.5rem;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+    
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+      box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+    }
+    
+    .contact-form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    
+    .contact-form button {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: var(--transition);
+      margin-top: 1rem;
+    }
+    
+    .contact-form button:hover {
+      background-color: #e06b4c;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 126, 95, 0.3);
+    }
+    
+    .form-message {
+      margin-top: 1rem;
+      padding: 0.8rem;
+      border-radius: var(--border-radius);
+      display: none;
+    }
+    
+    .form-message.success {
+      background-color: #d4edda;
+      color: #155724;
+      display: block;
+    }
+    
+    .form-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      display: block;
+    }
+    
+    .map-container {
+      margin-top: 3rem;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .social-list li {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+</head>
+
+<body>
+
+  <header class="header" data-header style="background-color: rgb(56, 60, 84);">
+    <div class="container">
+
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="logo Desa Jukong" class="logo-light">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="logo Desa Jukong" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="/" class="logo">
+            <img src="./assets/images/logo.png" width="74" height="24" alt="logo utama Desa Jukong">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="profil.html" class="navbar-link">Profil</a></li>
+          <li><a href="struktur.html" class="navbar-link">struktur</a></li>
+          <li><a href="kegiatan.html" class="navbar-link">Kegiatan</a></li>
+          <li><a href="surat.html" class="navbar-link">layanan</a></li>
+          <li><a href="kontak.html" class="navbar-link">Kontak</a></li>
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <section class="section hero has-bg-image" aria-label="kontak" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">HUBUNGI KAMI</h1>
+            <p class="hero-text">Kantor Desa Jukong siap melayani kebutuhan informasi dan administrasi warga</p>
+
+            <div class="btn-wrapper">
+              <a href="#kontak" class="btn btn-primary">INFO KONTAK</a>
+              <a href="https://wa.me/082143063098" class="btn btn-outline">WHATSAPP</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="kontak">
+        <div class="contact-container">
+          <!-- Left: Contact Info -->
+          <div class="contact-info">
+            <h2>Kantor Desa Jukong</h2>
+            
+            <h3>Alamat</h3>
+            <p>
+              Kantor Desa Jukong<br>
+              Kecamatan Labang, Kabupaten Bangkalan<br>
+              Jawa Timur 69163
+            </p>
+            <hr>
+            
+            <h3>Kontak</h3>
+            <div class="contact-lines">
+              <div><span class="label">📞</span> <a href="tel:082143063098">0821-4306-3098</a></div>
+              <div><span class="label">📧</span> <a href="mailto:desajukong@gmail.com">desajukong@gmail.com</a></div>
+              <div><span class="label">🕒</span> Senin-Jumat: 08.00 - 14.00 WIB</div>
+            </div>
+            <hr>
+            
+            <h3>Lokasi</h3>
+            <p>
+              Desa Jukong terletak di Kecamatan Labang, Kabupaten Bangkalan. 
+              Akses mudah melalui jalan utama kecamatan.
+            </p>
+          </div>
+          
+          <!-- Right: Contact Form -->
+          <div class="contact-form">
+            <h3>Kirim Pesan</h3>
+            <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+              <div id="formMessage" class="form-message"></div>
+              
+              <label for="name">Nama Lengkap:
+                <input type="text" id="name" name="name" required>
+              </label>
+              
+              <label for="email">Email:
+                <input type="email" id="email" name="email" required>
+              </label>
+              
+              <label for="subject">Subjek:
+                <input type="text" id="subject" name="subject" required>
+              </label>
+              
+              <label for="message">Pesan:
+                <textarea id="message" name="message" required></textarea>
+              </label>
+              
+              <button type="submit">KIRIM PESAN</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="container" style="padding-top: 2rem;">
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23758.24355033956!2d112.75433362104793!3d-7.135004686388946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd803a85951e069%3A0x727dbd4593b3fefb!2sJukong%2C%20Kec.%20Labang%2C%20Kabupaten%20Bangkalan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1770609540718!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+          <h2 class="h2 section-title">BUTUH BANTUAN?</h2>
+          <p class="section-text">Tim Desa Jukong siap membantu Anda</p>
+          <a href="https://www.google.com/maps/place/Bindang,+Kec.+Pasean,+Kabupaten+Pamekasan,+Jawa+Timur/@-6.9028075,113.626138,15z/data=!3m1!4b1!4m6!3m5!1s0x2dd9c42a2b37fcc9:0xb5da756c37a67faf!8m2!3d-6.9026743!4d113.6293916!16s%2Fg%2F12lnhhsnh?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D" class="btn btn-primary">LIHAT LOKASI DI MAPS</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    // Fetch footer
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+
+    // Form submission handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const form = e.target;
+      const formData = new FormData(form);
+      const formMessage = document.getElementById('formMessage');
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          formMessage.textContent = 'Pesan Anda telah terkirim! Kami akan segera menghubungi Anda.';
+          formMessage.className = 'form-message success';
+          form.reset();
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(error => {
+        formMessage.textContent = 'Maaf, terjadi kesalahan saat mengirim pesan. Silakan coba lagi nanti atau hubungi kami melalui WhatsApp.';
+        formMessage.className = 'form-message error';
+      });
+    });
+  </script>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script1.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

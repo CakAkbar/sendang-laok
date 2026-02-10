@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary meta tags -->
+  <title>KKN Desa Bindang - Kegiatan Kami</title>
+  <meta name="title" content="KKN Desa Bindang - Kegiatan Mahasiswa">
+  <meta name="description" content="Kegiatan Kuliah Kerja Nyata Mahasiswa di Desa Bindang, Kecamatan Pasean, Kabupaten Pamekasan">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+
+  <!-- Google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/stylePR.css">
+  <style>
+    /* Tambahan CSS untuk memperbaiki layout */
+    .project-details {
+      max-height: 300px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    .project-details::-webkit-scrollbar {
+      width: 5px;
+    }
+    .project-details::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 5px;
+    }
+    .project-details p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .project-specs li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .project-card {
+      transition: all 0.3s ease;
+    }
+    .project-card.active {
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  </style>
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+</head>
+
+<body>
+  <br>
+  <br>
+  <!-- Header -->
+  <header class="header" data-header style="background-color: rgb(56, 60, 84);">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="Logo Desa Bindang" class="logo-light">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="Logo Desa Bindang" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="/" class="logo">
+            <img src="./assets/images/logo.png" width="74" height="24" alt="Logo Desa Bindang">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="profil.html" class="navbar-link">Profil</a></li>
+          <li><a href="struktur.html" class="navbar-link">struktur</a></li>
+          <li><a href="kegiatan.html" class="navbar-link">Kegiatan</a></li>
+          <li><a href="surat.html" class="navbar-link">layanan</a></li>
+          <li><a href="kontak.html" class="navbar-link">Kontak</a></li>
+        </ul>
+
+        <div class="wrapper">
+          <a href="https://wa.me/+6285607147641" class="contact-link">Kontak Desa</a>
+        </div>
+
+        <ul class="social-list">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-youtube"></ion-icon></a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+  <br><br>
+
+  
+
+  <!-- Projects Section -->
+  <section class="section projects" aria-labelledby="projects-label">
+    <div class="container">
+      <h2 class="h2 section-title">Kegiatan KKN Kelompok 40 di Desa Bindang</h2>
+      <p class="section-text">Berbagai program kerja yang telah dilaksanakan oleh mahasiswa KKN Kelompok 40 di Desa Bindang, Kecamatan Pasean, Kabupaten Pamekasan</p>
+      
+      <div class="project-list">
+        <!-- Kegiatan 1 -->
+        <div class="project-card active">
+          <div class="project-header">
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            <h3 class="h3 project-title">Pembukaan KKN Kelompok 40 di Desa Bindang</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-details">
+              <p>Acara pembukaan resmi KKN Kelompok 40 di Balai Desa Bindang dihadiri oleh perangkat desa, tokoh masyarakat, dan warga. Kegiatan ini menandai dimulainya rangkaian program pengabdian mahasiswa selama satu bulan di Desa Bindang.</p>
+              <p>Dalam acara ini, koordinator kelompok memaparkan rencana kerja dan program unggulan yang akan dilaksanakan, termasuk sosialisasi alat penabur pupuk modern untuk membantu petani lokal meningkatkan efisiensi pertanian.</p>
+              <ul class="project-specs">
+                <li><strong>Lokasi:</strong> Balai Desa Bindang</li>
+                <li><strong>Tanggal:</strong> 5 Juli 2023</li>
+                <li><strong>Peserta:</strong> Perangkat desa, tokoh masyarakat, dan warga</li>
+                <li><strong>Kegiatan:</strong> Sambutan, pemaparan program, ramah tamah</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <div class="image-container">
+                <img src="./assets/images/desa/pembukaan1.jpg" alt="Pembukaan KKN di Balai Desa" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/pembukaan2.jpg" alt="Penyambutan oleh kepala desa" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/pembukaan3.jpg" alt="Foto bersama perangkat desa" class="project-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kegiatan 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            <h3 class="h3 project-title">Kegiatan belajar dan mengajar</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-details">
+              <p>Program pengajaran kreatif untuk siswa SDN  dengan metode pembelajaran interaktif dan menyenangkan. Fokus pada pendidikan karakter, bahasa Inggris dasar, dan kesadaran lingkungan.</p>
+              <p>Kegiatan ini dilaksanakan selama 2 minggu dengan melibatkan siswa kelas 1 sampai 6. Materi disampaikan melalui permainan edukatif, lagu, dan praktik langsung untuk memudahkan pemahaman siswa.</p>
+              <ul class="project-specs">
+                <li><strong>Lokasi:</strong> SDN di desa jepon</li>
+                <li><strong>Durasi:</strong> 2 minggu (10-21 Juli 2023)</li>
+                <li><strong>Siswa:</strong> Kelas 1-6 (total 50 siswa)</li>
+                <li><strong>Materi:</strong> Edukasi lingkungan, kreativitas,bahasa indonesia, bahasa Inggris, dan matematika dasar</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <div class="image-container">
+                <img src="./assets/images/desa/sekolah1.jpg" alt="Kegiatan mengajar di kelas" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/sekolah2.jpg" alt="Siswa berpartisipasi aktif" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/sekolah3.jpg" alt="Permainan edukatif" class="project-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kegiatan 3 -->
+        <div class="project-card">
+          <div class="project-header">
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            <h3 class="h3 project-title">Gotong Royong Membersihkan Taman Desa</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-details">
+              <p>Kegiatan kerja bakti bersama warga untuk membersihkan dan merapikan taman desa sebagai ruang publik yang nyaman. Termasuk penanaman tanaman hias dan pembuatan tempat sampah.</p>
+              <p>Selain membersihkan, kami juga melakukan pengecatan ulang fasilitas taman dan pembuatan papan informasi. Kegiatan ini diikuti oleh 30+ warga dan berhasil membuat taman lebih rapi dan asri.</p>
+              <ul class="project-specs">
+                <li><strong>Lokasi:</strong> Taman Desa Bindang</li>
+                <li><strong>Tanggal:</strong> 15 Juli 2023</li>
+                <li><strong>Peserta:</strong> 30+ warga dan mahasiswa KKN</li>
+                <li><strong>Hasil:</strong> Taman bersih, 15 tanaman hias baru, 5 tempat sampah</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <div class="image-container">
+                <img src="./assets/images/desa/bersih1.jpg" alt="Gotong royong membersihkan taman" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/bersih2.jpg" alt="Penanaman tanaman hias" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/bersih3.jpg" alt="Hasil taman yang bersih" class="project-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kegiatan 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            <h3 class="h3 project-title">Pembuatan QR Code QRIS untuk warung warung</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-details">
+              <p>Program digitalisasi UMKM dengan pembuatan QR Code QRIS untuk pedagang kecil . Termasuk pelatihan penggunaan aplikasi transaksi digital.</p>
+              <p>Kami membantu 5 pedagang kecil di pasar desa membuat QRIS gratis melalui sistem Online Single Submission (OSS). Kegiatan ini mendapat respon positif dari pedagang.</p>
+              <ul class="project-specs">
+                <li><strong>Lokasi:</strong> Pasar Desa Bindang</li>
+                <li><strong>Tanggal:</strong> 20 Juli 2023</li>
+                <li><strong>Peserta:</strong> 5 pedagang kecil</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <div class="image-container">
+                <img src="./assets/images/desa/qris.jpg" alt="Sosialisasi QRIS dan NIB" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/qris1.jpg" alt="Pembuatan QR Code untuk pedagang" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/qris2.jpg" alt="Panduan penggunaan aplikasi" class="project-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Kegiatan 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            <h3 class="h3 project-title">Pendaftaran NIB untuk Legalitas Usaha</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-details">
+              <p>Program pendampingan pembuatan Nomor Induk Berusaha (NIB) sebagai legalitas usaha bagi UMKM. Termasuk pelatihan pengurusan melalui sistem Online Single Submission (OSS) dan pemahaman regulasi.</p>
+              <p>Kami membantu 5 pelaku UMKM di desa untuk mendapatkan NIB secara gratis melalui OSS. Kegiatan ini membantu usaha mereka menjadi lebih legal dan terdaftar resmi.</p>
+              <ul class="project-specs">
+                <li><strong>Lokasi:</strong> Kantor Desa Bindang</li>
+                <li><strong>Tanggal:</strong> 20 Juli 2023</li>
+                <li><strong>Peserta:</strong> 5 pelaku UMKM</li>
+                <li><strong>Manfaat:</strong> Legalitas usaha, kemudahan perizinan, akses pembiayaan</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <div class="image-container">
+                <img src="./assets/images/desa/nib1.jpg" alt="Sosialisasi pentingnya NIB" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/nib2.jpg" alt="Proses pendaftaran NIB online" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/nib3.jpg" alt="Penyerahan dokumen NIB" class="project-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+                <!-- Kegiatan 6 -->
+        <div class="project-card">
+          <div class="project-header">
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            <h3 class="h3 project-title">Pelayanan Posyandu Balita dan Lansia Desa Bindang</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-details">
+              <p>Kegiatan rutin bulanan Pos Pelayanan Terpadu (Posyandu) untuk memantau kesehatan balita dan lansia. Meliputi penimbangan berat badan, pengukuran tinggi badan, pemberian vitamin, serta penyuluhan kesehatan.</p>
+              <p>Posyandu kami hadiri secara rutin untuk membantu proses pendaftaran, pencatatan data KMS, dan pendampingan para ibu. Setiap bulan rata-rata 50 balita dan 30 lansia terlayani dengan baik.</p>
+              <ul class="project-specs">
+                <li><strong>Lokasi:</strong> Balai Dusun Bindang Timur</li>
+                <li><strong>Jadwal:</strong> Setiap minggu ke-2 bulanan</li>
+                <li><strong>Peserta:</strong> 50+ balita & 30+ lansia</li>
+                <li><strong>Layanan:</strong> Penimbangan, Imunisasi, Penyuluhan Gizi, Pemeriksaan Lansia</li>
+                <li><strong>Kader:</strong> 10 orang kader terlatih</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <div class="image-container">
+                <img src="./assets/images/desa/pos1.jpg" alt="Proses penimbangan balita" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/pos2.jpg" alt="Penyuluhan gizi oleh bidan" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/pos3.jpg" alt="Pemeriksaan kesehatan lansia" class="project-image">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kegiatan 5 -->
+        <div class="project-card">
+          <div class="project-header">
+            <ion-icon name="chevron-down-outline" class="toggle-icon"></ion-icon>
+            <h3 class="h3 project-title">Senam Bersama Ibu-Ibu PKK Desa Bindang</h3>
+          </div>
+          <div class="project-content">
+            <div class="project-details">
+              <p>Kegiatan senam pagi bersama ibu-ibu PKK Desa Bindang untuk meningkatkan kesehatan dan kebugaran. Acara ini juga menjadi sarana silaturahmi dan penyampaian informasi penting.</p>
+              <p>Selain senam, kami juga memberikan penyuluhan tentang pentingnya aktivitas fisik dan pola hidup sehat. Kegiatan diikuti oleh 25+ ibu-ibu PKK dan berlangsung sangat meriah.</p>
+              <ul class="project-specs">
+                <li><strong>Lokasi:</strong> Lapangan Desa Bindang</li>
+                <li><strong>Tanggal:</strong> 22 Juli 2023 (Pukul 06.00-08.00)</li>
+                <li><strong>Peserta:</strong> 25+ anggota PKK</li>
+                <li><strong>Fasilitas:</strong> Sound system, hadiah doorprize, snack sehat</li>
+              </ul>
+            </div>
+            <div class="project-gallery">
+              <div class="image-container">
+                <img src="./assets/images/desa/senam1.jpg" alt="Senam bersama ibu-ibu PKK" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/senam2.jpg" alt="Instruktur senam memandu" class="project-image">
+              </div>
+              <div class="image-container">
+                <img src="./assets/images/desa/senam3.jpg" alt="Foto bersama setelah senam" class="project-image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimoni Section -->
+  <section class="section testimoni" style="background-color: #f8f9fa; padding: 60px 0;">
+    <div class="container">
+      <h2 class="h2 section-title" style="text-align: center;">Kesan Peserta KKN</h2>
+      <div class="testimoni-grid">
+        <div class="testimoni-card">
+          <div class="testimoni-content">
+            <p>"Pengalaman KKN di Desa Bindang sangat berkesan. Warga sangat ramah dan antusias dengan program-program kami."</p>
+          </div>
+          <div class="testimoni-author">
+            <h4>ABDUL HIJJAH AKBARUL HIDAYATULLOH</h4>
+            <p>Koordinator Kelompok</p>
+          </div>
+        </div>
+        <div class="testimoni-card">
+          <div class="testimoni-content">
+            <p>"Senang bisa mengajar anak-anak SD Bindang 1. Mereka cepat menangkap materi dan sangat antusias belajar."</p>
+          </div>
+          <div class="testimoni-author">
+            <h4>Dika Pratama</h4>
+            <p>Divisi Pendidikan</p>
+          </div>
+        </div>
+        <div class="testimoni-card">
+          <div class="testimoni-content">
+            <p>"Program QRIS untuk warung sangat bermanfaat. Sekarang transaksi jadi lebih mudah dan modern."</p>
+          </div>
+          <div class="testimoni-author">
+            <h4>Bu Siti</h4>
+            <p>Penjualan di warung madura</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .testimoni-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .testimoni-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease;
+    }
+    .testimoni-card:hover {
+      transform: translateY(-5px);
+    }
+    .testimoni-content {
+      font-style: italic;
+      margin-bottom: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+    .testimoni-author h4 {
+      margin-bottom: 5px;
+      color: #333;
+    }
+    .testimoni-author p {
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+
+  <!-- Image Preview Modal -->
+  <div class="image-modal" id="imageModal">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div class="caption" id="caption"></div>
+  </div>
+
+  <!-- Project Interaction Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectCards = document.querySelectorAll('.project-card');
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const captionText = document.getElementById('caption');
+      const closeModal = document.querySelector('.close-modal');
+      
+      // Accordion functionality
+      projectCards.forEach(card => {
+        const header = card.querySelector('.project-header');
+        
+        header.addEventListener('click', () => {
+          card.classList.toggle('active');
+          
+          // Close other open cards
+          if (card.classList.contains('active')) {
+            projectCards.forEach(otherCard => {
+              if (otherCard !== card && otherCard.classList.contains('active')) {
+                otherCard.classList.remove('active');
+              }
+            });
+          }
+        });
+      });
+      
+      // Image click functionality
+      document.querySelectorAll('.project-image').forEach(img => {
+        img.addEventListener('click', function() {
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        });
+      });
+      
+      // Close modal
+      closeModal.addEventListener('click', function() {
+        modal.style.display = "none";
+      });
+      
+      // Close when clicking outside image
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+      
+      // Open first project by default
+      if (projectCards.length > 0) {
+        projectCards[0].classList.add('active');
+      }
+    });
+  </script>
+
+  <div id="footer-container"></div>
+
+  <script>
+    // Pemanggilan footer sederhana
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+  <!-- Custom js link -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script1.js"></script>
+
+  <!-- Ionicon -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

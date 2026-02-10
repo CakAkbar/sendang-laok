@@ -1,0 +1,163 @@
+/* Logo Meaning Section */
+.logo-meaning {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .logo-display {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .logo-large {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .meaning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .meaning-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .meaning-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .blue-circle { background-color: #1e90ff; }
+  .black-square { background-color: #333; }
+  .green-leaf { background-color: #2e8b57; }
+  .gear-icon { background-color: #555; }
+  .typography-icon { background-color: #777; }
+  
+  /* Vision & Mission Section */
+  .vision-mission {
+    padding: 60px 0;
+  }
+  
+  .vision-box {
+    background: linear-gradient(135deg, #1e90ff, #00bfff);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .vision-icon {
+    font-size: 60px;
+    flex-shrink: 0;
+  }
+  
+  .mission-box {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+    padding: 40px;
+  }
+  
+  .mission-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .mission-icon {
+    font-size: 40px;
+    color: #1e90ff;
+  }
+  
+  .mission-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mission-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .mission-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .mission-number {
+    width: 40px;
+    height: 40px;
+    background-color: #1e90ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  /* Core Values Section */
+  .core-values {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .value-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .value-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .value-card.innovation .value-icon { color: #1e90ff; }
+  .value-card.quality .value-icon { color: #2e8b57; }
+  .value-card.sustainability .value-icon { color: #ff8c00; }
+  .value-card.integrity .value-icon { color: #9932cc; }
+  
+  @media (max-width: 768px) {
+    .vision-box {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .meaning-item {
+      flex-direction: column;
+    }
+  }

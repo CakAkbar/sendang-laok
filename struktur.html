@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <title>Struktur Pemerintahan Desa Jukong - Kecamatan Labang</title>
+  <meta name="title" content="Struktur Pemerintahan Desa Jukong KECAMATAN LABANG">
+
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style1.css">
+
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/profil-desa.jpg">
+
+  <style>
+/* ===== Struktur Organisasi CSS ===== */
+.org-structure {
+  margin: 50px 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.org-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.org-title h3 {
+  font-size: 1.5rem;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+.org-title p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.org-chart {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
+}
+
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: fit-content;
+  width: 100%;
+}
+
+.node {
+  position: relative;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.node-content {
+  background: #2e7d32;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 200px;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.node-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  background: #1b5e20;
+}
+
+.node-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.node-name {
+  font-size: 0.9rem;
+}
+
+.children {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.child {
+  margin: 0 15px 30px;
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+
+.child::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+}
+
+.node::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+}
+
+.horizontal-line {
+  position: absolute;
+  top: -20px;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.horizontal-line.first {
+  left: 50%;
+  right: 0;
+}
+
+.horizontal-line.last {
+  left: 0;
+  right: 50%;
+}
+
+.horizontal-line.middle {
+  left: 0;
+  right: 0;
+}
+
+/* Level Warna */
+.level-1 .node-content {
+  background: #1b5e20;
+  padding: 20px 30px;
+}
+
+.level-2 .node-content {
+  background: #2e7d32;
+}
+
+.level-3 .node-content {
+  background: #388e3c;
+}
+
+.level-4 .node-content {
+  background: #43a047;
+}
+
+/* ===== Struktur Detail CSS ===== */
+.structure-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin: 50px 0;
+}
+
+.structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.structure-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.structure-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  background: #2de136;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.card-body ul {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.card-body li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Foto Kepala Desa */
+.kepala-desa-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.kepala-desa-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #2e7d32;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.kepala-desa-info {
+  text-align: center;
+}
+
+.kepala-desa-info h3 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.kepala-desa-info p {
+  color: #666;
+  margin-bottom: 3px;
+}
+
+/* Warna Variasi Section */
+.card-header.brown {
+  background: #26db29;
+}
+
+.card-header.blue {
+  background: #0277bd;
+}
+
+.card-header.pink {
+  background: #c2185b;
+}
+
+.card-header.orange {
+  background: #e65100;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 992px) {
+  .structure-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .node-content {
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .org-chart {
+    overflow-x: visible;
+  }
+  
+  .children {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .child {
+    margin: 15px 0;
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .child::before,
+  .node::before {
+    display: none;
+  }
+  
+  .horizontal-line {
+    display: none;
+  }
+  
+  .structure-section {
+    padding: 30px 20px;
+  }
+  
+  .structure-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .org-title h3 {
+    font-size: 1.3rem;
+  }
+  
+  .node-content {
+    min-width: 180px;
+    padding: 10px 15px;
+  }
+  
+  .node-title {
+    font-size: 1rem;
+  }
+  
+  .node-name {
+    font-size: 0.85rem;
+  }
+  
+  .structure-section {
+    padding: 25px 15px;
+    margin: 30px 0;
+  }
+  
+  .kepala-desa-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ===== Utility Classes ===== */
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+  </style>
+</head>
+
+<body>
+
+  <header class="header" data-header style="background-color: rgb(56, 60, 84);">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="Logo Desa Jukong" class="logo-light">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="Logo Desa Jukong" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="/" class="logo">
+            <img src="./assets/images/logo.png" width="74" height="24" alt="Logo Desa Jukong">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="profil.html" class="navbar-link">Profil</a></li>
+          <li><a href="struktur.html" class="navbar-link">struktur</a></li>
+          <li><a href="surat.html" class="navbar-link">layanan</a></li>
+          <li><a href="kontak.html" class="navbar-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- Hero Section -->
+      <section class="section hero has-bg-image" aria-label="struktur pemerintahan" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">STRUKTUR PEMERINTAHAN</h1>
+            <p class="hero-text">Desa Jukong - Kecamatan Labang</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kepala Desa Profile -->
+      <section class="section" aria-labelledby="kepala-desa-label">
+        <div class="container">
+          <div class="kepala-desa-profile">
+            <img src="./assets/images/kades.jpeg" alt="Foto Kepala Desa Jukong" class="kepala-desa-photo">
+            <div class="kepala-desa-info">
+              <h3>MOH. DOFIR ANDARU</h3>
+              <p><strong>Kepala Desa Jukong</strong></p>
+              <p>Periode 2021-2029</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Struktur Organisasi Section -->
+      <section class="section structure-section" aria-labelledby="structure-label">
+        <div class="container">
+          <p class="section-subtitle" id="structure-label">Organisasi Desa</p>
+          <h2 class="h2 section-title">Struktur Pemerintahan Desa Jukong</h2>
+          
+          <div class="org-structure">
+            <div class="org-title">
+              <h3 class="h3">Diagram Struktur Organisasi</h3>
+              <p>Berdasarkan Keputusan Kepala Desa Jukong Nomor: 188/3/Kpts/433.312.3/2021</p>
+            </div>
+            
+            <div class="org-chart">
+              <div class="tree">
+                <!-- Level 1 - Kepala Desa -->
+                <div class="node level-1">
+                  <div class="node-content">
+                    <div class="node-title">KEPALA DESA</div>
+                    <div class="node-name">MOH. DOFIR ANDARU</div>
+                  </div>
+                  
+                  <div class="children">
+                    <!-- Garis koneksi -->
+                    <div class="horizontal-line middle"></div>
+                    
+                    <!-- Level 2 - Sekretaris Desa -->
+                    <div class="child">
+                      <div class="node level-2">
+                        <div class="node-content">
+                          <div class="node-title">SEKRETARIS DESA</div>
+                          <div class="node-name">ABD GAFUR</div>
+                        </div>
+                        
+                        <div class="children">
+                          <!-- Garis koneksi -->
+                          <div class="horizontal-line middle"></div>
+                          
+                          <!-- Level 3 - Kaur -->
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KAUR TU DAN UMUM</div>
+                                <div class="node-name">INAYATUL LUTFIYYAH</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KAUR KEUANGAN</div>
+                                <div class="node-name">PRADIPTA PUSPITA LARASATI</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KAUR PERENCANAAN</div>
+                                <div class="node-name">MUHAMMAD TAUFIQ</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Level 2 - Pelaksana Teknis -->
+                    <div class="child">
+                      <div class="node level-2">
+                        <div class="node-content">
+                          <div class="node-title">PELAKSANA TEKNIS</div>
+                        </div>
+                        
+                        <div class="children">
+                          <!-- Garis koneksi -->
+                          <div class="horizontal-line middle"></div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KASI PEMERINTAHAN</div>
+                                <div class="node-name">AZIS JAINURY DWI PUTRA</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KASI PELAYANAN</div>
+                                <div class="node-name">MOHAMMAD HABIBURROHMAN</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KASI KESEJAHTERAAN</div>
+                                <div class="node-name">MOH. YUNUS</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Level 2 - Pelaksana Kewilayahan -->
+                    <div class="child">
+                      <div class="node level-2">
+                        <div class="node-content">
+                          <div class="node-title">PELAKSANA KEWILAYAHAN</div>
+                        </div>
+                        
+                        <div class="children">
+                          <!-- Garis koneksi -->
+                          <div class="horizontal-line middle"></div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KADUS JURANG</div>
+                                <div class="node-name">FITRIYAH</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KADUS KOALAS</div>
+                                <div class="node-name">ABD. WAFI</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KADUS TLAGAH</div>
+                                <div class="node-name">ABD. WEFIR</div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="child">
+                            <div class="node level-3">
+                              <div class="node-content">
+                                <div class="node-title">KADUS MASJID</div>
+                                <div class="node-name">MULYONO HAS</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Detail Struktur Section -->
+      <section class="section" aria-labelledby="detail-label">
+        <div class="container">
+          <p class="section-subtitle" id="detail-label">Detail Pemerintahan</p>
+          <h2 class="h2 section-title">Struktur Lengkap Pemerintahan Desa Jukong</h2>
+          
+          <div class="structure-grid">
+            <!-- Kepala Desa -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #1b5e20;">
+                <h3 class="h4">Kepala Desa</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> MOH. YUNUS ANDARU</p>
+                <p><strong>Periode:</strong> 2021-2029</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Pemimpin tertinggi dalam struktur pemerintahan desa</li>
+                  <li>Pengambilan keputusan dan kebijakan strategis</li>
+                  <li>Pengawasan terhadap pelaksanaan program pembangunan</li>
+                  <li>Pelayanan masyarakat</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Sekretaris Desa -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #2e7d32;">
+                <h3 class="h4">Sekretaris Desa</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> ABD GAFUR</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Penyelenggaraan administrasi desa</li>
+                  <li>Mendukung kelancaran tugas Kepala Desa</li>
+                  <li>Membawahi beberapa Kepala Urusan (Kaur)</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- KASI Pemerintahan -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #0277bd;">
+                <h3 class="h4">KASI Pemerintahan</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> AZIS JAINURY DWI PUTRA</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Perencanaan dan pelaksanaan kegiatan pemerintahan</li>
+                  <li>Pengelolaan administrasi kependudukan</li>
+                  <li>Koordinasi dengan lembaga kemasyarakatan</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- KASI Pelayanan -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #0277bd;">
+                <h3 class="h4">KASI Pelayanan</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> MOHAMMAD HABIBURROHMAN</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Pelayanan kepada warga desa</li>
+                  <li>Pembuatan KTP, akta kelahiran</li>
+                  <li>Pelayanan administrasi lainnya</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- KASI Kesejahteraan -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #0277bd;">
+                <h3 class="h4">KASI Kesejahteraan</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> MOH. YUNUS</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Program-program kesejahteraan sosial dan kesehatan</li>
+                  <li>Bantuan sosial</li>
+                  <li>Kesehatan masyarakat dan pendidikan</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- KAUR TU dan Umum -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #388e3c;">
+                <h3 class="h4">KAUR TU dan Umum</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> INAYATUL LUTFIYYAH</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Urusan administrasi dan umum di desa</li>
+                  <li>Pengelolaan data dan dokumen penting desa</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pelaksana Kewilayahan Section -->
+      <section class="section" aria-labelledby="wilayah-label">
+        <div class="container">
+          <p class="section-subtitle" id="wilayah-label">Pelaksana Kewilayahan</p>
+          <h2 class="h2 section-title">Kepala Dusun Desa Jukong</h2>
+          
+          <div class="structure-grid">
+            <!-- Dusun Jurang -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #0aedd3;">
+                <h3 class="h4">Kepala Dusun Jurang</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> FITRIYAH</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Melaksanakan kebijakan desa di tingkat dusun</li>
+                  <li>Membantu Kepala Desa dalam koordinasi wilayah</li>
+                  <li>Penanganan masalah di tingkat dusun</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Dusun Koalas -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #0aedd3;">
+                <h3 class="h4">Kepala Dusun Koalas</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> ABD. WAFI</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Melaksanakan kebijakan desa di tingkat dusun</li>
+                  <li>Membantu Kepala Desa dalam koordinasi wilayah</li>
+                  <li>Penanganan masalah di tingkat dusun</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Dusun Tlagah -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #0aedd3;">
+                <h3 class="h4">Kepala Dusun Tlagah</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> ABD. WEFIR</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Melaksanakan kebijakan desa di tingkat dusun</li>
+                  <li>Membantu Kepala Desa dalam koordinasi wilayah</li>
+                  <li>Penanganan masalah di tingkat dusun</li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Dusun Masjid -->
+            <div class="structure-card">
+              <div class="card-header" style="background: #0aedd3;">
+                <h3 class="h4">Kepala Dusun Masjid</h3>
+              </div>
+              <div class="card-body">
+                <p><strong>Nama:</strong> MULYONO HAS</p>
+                <p><strong>Tugas Pokok:</strong></p>
+                <ul>
+                  <li>Melaksanakan kebijakan desa di tingkat dusun</li>
+                  <li>Membantu Kepala Desa dalam koordinasi wilayah</li>
+                  <li>Penanganan masalah di tingkat dusun</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Keterangan Section -->
+      <section class="section service" aria-labelledby="keterangan-label">
+        <div class="container">
+          <div class="structure-section">
+            <p class="section-subtitle" id="keterangan-label">Keterangan</p>
+            <h2 class="h2 section-title">Berdasarkan Keputusan Resmi</h2>
+            <div class="text-center">
+              <p><strong>LAMPIRAN KEPUTUSAN KEPALA DESA JUKONG NOMOR: 188/3/Kpts/433.312.3/2021</strong></p>
+              <p>TENTANG SUSUNAN PERANGKAT DESA JUKONG KECAMATAN LABANG KABUPATEN BANGKALAN</p>
+              <p class="mt-30"><strong>Kepala Desa Jukong</strong></p>
+              <p><strong>MOH. YUNUS ANDARU</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+          <h2 class="h2 section-title">Butuh Informasi Lebih Lanjut Tentang Pemerintahan Desa?</h2>
+          <a href="https://wa.me/+6282332921583" class="btn btn-primary">HUBUNGI KANTOR DESA</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script1.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

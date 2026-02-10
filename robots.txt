@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /style-guide.md
+Disallow: /index.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: 

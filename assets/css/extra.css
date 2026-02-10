@@ -1,0 +1,273 @@
+.three-column-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+}
+
+.column.first {
+    max-width: 500px;
+    text-align: left;
+}
+
+.column ul {
+    list-style-type: disc;
+    background-color: #f0f0f0;
+    /* abu-abu muda */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.column ul li {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.card-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 106, 255, 0.555);
+    /* biru transparan */
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #007bff;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.card-meta-item ion-icon {
+    font-size: 20px;
+}
+
+.contact-section {
+    background-color: rgba(0, 68, 171, 0.764);
+    /* biru */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 180px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact-text {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.contact-text h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-button {
+    flex-shrink: 0;
+}
+
+.contact-button a {
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: #007bff;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.contact-button a:hover {
+    background-color: #e6e6e6;
+}
+
+.contact-button ion-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.section-wrapper {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.text-content {
+    flex: 1 1 50%;
+    text-align: left;
+}
+
+.text-content h2 {
+    margin-top: 0;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.image-content {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content,
+    .image-content {
+        flex: 1 1 100%;
+    }
+
+    .text-content {
+        text-align: center;
+    }
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+    flex: 1 1 300px;
+}
+
+.contact-info h2 {
+    margin-bottom: 10px;
+}
+
+.contact-info ul,
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info li {
+    margin-bottom: 8px;
+}
+
+.social-list a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-info {
+    padding: 20px;
+    max-width: 500px;
+  }
+  
+  .contact-info hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+  }
+  
+  .contact-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-lines div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .contact-lines .label {
+    min-width: 100px;
+    font-weight: 500;
+  }
+  
+  .social-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .social-list li {
+    margin-bottom: 6px;
+  }
+  
+  .social-list a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <title>PROFIL DESA JUKONG - KECAMATAN LABANG</title>
+  <meta name="title" content="PROFIL DESA JUKONG KECAMATAN LABANG">
+
+  <link rel="icon" href="./assets/images/logo.png" type="image/png">
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/style1.css">
+
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/profil-desa.jpg">
+
+    <style>
+    /* Tambahan CSS khusus untuk Visi Misi */
+    .vision-mission-container {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin: 50px 0;
+    }
+    
+    .vision-box {
+      background: #06c13e;
+      color: white;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .vision-box::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #0ee82b, #00ff37);
+    }
+    
+    .vision-box h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .vision-box p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .mission-box {
+      counter-reset: mission-counter;
+    }
+    
+    .mission-item {
+      background: white;
+      padding: 20px 25px 20px 70px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-left: 4px solid #2e7d32;
+    }
+    
+    .mission-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .mission-item::before {
+      counter-increment: mission-counter;
+      content: counter(mission-counter);
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+      background: #2e7d32;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+      .vision-mission-container {
+        padding: 20px;
+      }
+      
+      .vision-box {
+        padding: 20px;
+      }
+      
+      .mission-item {
+        padding: 15px 15px 15px 60px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <header class="header" data-header style="background-color: rgb(56, 60, 84);">
+    <div class="container">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="Logo Desa Jukong" class="logo-light">
+        <img src="./assets/images/logo.png" width="80" height="80" alt="Logo Desa Jukong" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="/" class="logo">
+            <img src="./assets/images/logo.png" width="74" height="24" alt="Logo Desa Jukong">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="profil.html" class="navbar-link">Profil</a></li>
+          <li><a href="struktur.html" class="navbar-link">struktur</a></li>
+
+          <li><a href="surat.html" class="navbar-link">layanan</a></li>
+          <li><a href="kontak.html" class="navbar-link">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <!-- Hero Section -->
+      <section class="section hero has-bg-image" aria-label="profil desa" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="h1 hero-title">PROFIL DESA JUKONG</h1>
+            <p class="hero-text">Kecamatan Labang - Kabupaten Bangkalan</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tentang Desa Section -->
+      <section class="section feature" aria-labelledby="about-label">
+        <div class="container">
+          <div class="feature-content">
+            <p class="section-subtitle" id="about-label">Tentang Kami</p>
+            <h2 class="h2 section-title">Desa Jukong</h2>
+            <p class="section-text">
+              Desa Jukong merupakan salah satu desa di Kecamatan Labang, Kabupaten Bangkalan, Provinsi Jawa Timur. 
+              Desa ini terletak di wilayah yang strategis dengan luas wilayah sekitar 350 hektar dan terdiri dari 4 dusun.
+            </p>
+            <p class="section-text">
+              Mayoritas penduduk Desa Jukong bekerja sebagai petani padi, jagung, dan kacang-kacangan, serta sebagian 
+              bekerja di sektor perdagangan dan jasa. Desa ini memiliki potensi pertanian yang cukup baik dengan 
+              didukung oleh sumber air yang memadai.
+            </p>
+          </div>
+
+          <figure class="feature-banner">
+            <img src="./assets/images/d2.jpg " width="800" height="531" loading="lazy" 
+                 alt="Pemandangan Desa Jukong" class="w-100">
+          </figure>
+        </div>
+      </section>
+
+      <!-- Wilayah Dusun Section -->
+      <section class="section service" aria-labelledby="dusun-label">
+        <div class="container">
+          <h2 class="h2 section-title">4 Dusun di Desa Jukong</h2>
+          
+          <ul class="grid-list">
+            <li>
+              <div class="service-card">
+                <h3 class="h4 card-title">Dusun Koalas</h3>
+                <p class="card-text">Dusun dengan lahan pertanian yang subur dan produktif</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <h3 class="h4 card-title">Dusun Tlagah</h3>
+                <p class="card-text">Dusun yang dikenal dengan kerajinan tangan dan usaha kecil menengah</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <h3 class="h4 card-title">Dusun Jurang</h3>
+                <p class="card-text">Pusat pemerintahan desa berada di dusun ini</p>
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <h3 class="h4 card-title">Dusun Masjid</h3>
+                <p class="card-text">Dusun dengan fasilitas ibadah dan pendidikan yang lengkap</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Visi Misi Section -->
+      <section class="section" aria-labelledby="vision-label">
+        <div class="container">
+          <div class="vision-mission-container">
+            <p class="section-subtitle" id="vision-label">Visi & Misi</p>
+            <h2 class="h2 section-title">Arah Pembangunan Desa Jukong</h2>
+            <br>
+
+            <div class="vision-box">
+              <h3 class="h3">Visi Desa 2023-2028</h3>
+              <p>"Terwujudnya Masyarakat Desa Jukong Yang Hebat dan Bermartabat, mampu dalam Pengelolaan Potensi Desa dan Pembangunan Desa yang Berkelanjutan untuk Mewujudkan Masyarakat yang Maju, Sejahtera Berkualitas, Berdaya saing, Aman, Jujur, Adil, Berbudaya dan Berakhlak mulia"</p>
+            </div>
+
+            <div class="mission-box">
+              <h3 class="h3" style="text-align: center; margin-bottom: 25px;">Misi Desa</h3>
+              
+              <div class="mission-item">
+                <p>Meningkatkan serta meneruskan tata kelola Desa Jukong yang baik</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Meningkatkan Kualitas SDM Masyarakat Desa Jukong yang siap berdaya saing</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Melanjutkan pembangunan infrastruktur, sarana dan prasarana baik dari segi fisik, ekonomi, pendidikan, kesehatan, dan kebudayaan di Desa</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Mengembangkan seluruh potensi Desa</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Meningkatkan perekonomian dan kesejahteraan masyarakat Desa Jukong</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Meningkatkan Kualitas serta membangun kesadaran kesehatan masyarakat dan tetap mengupayakan jaminan kesejahteraan masyarakat melalui program pemerintah</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Mengembangkan teknologi informasi dan komunikasi di Desa Jukong</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Mengembangkan kerja sama dan kemitraan strategis baik antar Desa maupun dengan Pemerintah Kabupaten</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Meningkatkan keamanan dan ketertiban di lingkungan Desa Jukong</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Mengedepankan kejujuran keadilan dan transparansi dalam kehidupan sehari-hari baik dalam pemerintahan maupun dengan masyarakat Desa</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Meningkatkan kehidupan masyarakat yang harmonis, toleran, saling menghormati dalam kehidupan berbudaya dan beragama di Desa Jukong</p>
+              </div>
+              
+              <div class="mission-item">
+                <p>Mengembangkan kegiatan-kegiatan keagamaan di Desa Jukong</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Demografi Section -->
+      <section class="stats" aria-label="demografi desa">
+        <div class="container">
+          <p class="section-subtitle">Data Kependudukan</p>
+          <h2 class="h2 section-title">Demografi Desa Jukong</h2>
+          <br>
+          
+                    <ul class="stats-card has-bg-image" style="background-image: url('./assets/images/stats-bg.jpg')">
+            <li>
+              <p class="card-text">
+                <span class="h1">2.850</span>
+                <span class="span">Jiwa Penduduk</span>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1">1.420</span>
+                <span class="span">Laki - Laki</span>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1">1.430</span>
+                <span class="span">Perempuan</span>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1">350 Ha</span>
+                <span class="span">Luas wilayah </span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Peta Wilayah Section -->
+      <section class="section service" aria-labelledby="map-label">
+        <div class="container">
+          <p class="section-subtitle" id="map-label">Wilayah Desa</p>
+          <h2 class="h2 section-title">Peta Desa Jukong</h2>
+          
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23758.24355033956!2d112.75433362104793!3d-7.135004686388946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd803a85951e069%3A0x727dbd4593b3fefb!2sJukong%2C%20Kec.%20Labang%2C%20Kabupaten%20Bangkalan%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1770608070958!5m2!1sid!2sid" 
+                    width="100%" height="450" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta" aria-label="call to action">
+        <div class="container">
+          <h2 class="h2 section-title">Informasi Lebih Lanjut Tentang Desa Kami</h2>
+          <a href="https://wa.me/+6282332921583" class="btn btn-primary">HUBUNGI KANTOR DESA</a>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      });
+  </script>
+
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script1.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <style>
+    /* Profile Page Specific Styles */
+    .vision-mission {
+      display: grid;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .vision {
+      background-color: #f8f9fa;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    
+    .vision p {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #2e7d32;
+      margin-top: 15px;
+    }
+    
+    .mission ol {
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+    
+    .mission li {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    
+    .map-container {
+      margin-top: 40px;
+      position: relative;
+    }
+    
+    .map-legend {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    
+    .color-box {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    
+    @media (min-width: 768px) {
+      .vision-mission {
+        grid-template-columns: 1fr 2fr;
+      }
+      
+      .map-legend {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(255,255,255,0.9);
+        width: 200px;
+      }
+    }
+  </style>
+</body>
+</html>

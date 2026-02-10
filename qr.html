@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate HD QR Code and Download</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen p-4">
+
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-md text-center">
+        <h1 class="text-2xl font-semibold text-gray-700 mb-6">Generate HD QR Code</h1>
+        
+        <label for="inputFileName" class="block text-lg text-gray-600 mb-2">Masukkan Nama File:</label>
+        <input type="text" id="inputFileName" class="w-full p-3 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" placeholder="Masukkan nama file">
+
+        <label for="inputLink" class="block text-lg text-gray-600 mb-2">Masukkan Link:</label>
+        <input type="text" id="inputLink" class="w-full p-3 border border-gray-300 rounded-md text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 mb-4" placeholder="Masukkan link">
+
+        <button onclick="generateQRCode()" class="w-full py-3 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition duration-300">Generate QR Code</button>
+
+        <div id="error-message" class="text-red-500 mt-2 hidden">Please enter a valid link and filename!</div>
+
+        <div id="qrcode" class="mt-6"></div>
+
+        <button id="downloadBtn" class="w-full py-3 bg-green-500 text-white rounded-md mt-6 hidden hover:bg-green-600 transition duration-300" onclick="downloadQRCode()">Download QR Code</button>
+    </div>
+
+    <script>
+        function generateQRCode() {
+            const fileName = document.getElementById('inputFileName').value;
+            const link = document.getElementById('inputLink').value;
+
+            if (fileName && link) {
+                document.getElementById('error-message').classList.add('hidden');
+
+                // Generate QR code with higher resolution (HD quality)
+                QRCode.toDataURL(link, {
+                    width: 800, // Set the width to generate a higher resolution QR code
+                    margin: 3  // Set margin for clarity
+                }, function (err, url) {
+                    if (err) {
+                        console.error(err);
+                    } else {
+                        // Display the high resolution QR code image
+                        document.getElementById('qrcode').innerHTML = `<img src="${url}" alt="QR Code" class="border-2 border-gray-200 rounded-lg max-w-full mx-auto">`;
+
+                        // Show the download button
+                        document.getElementById('downloadBtn').classList.remove('hidden');
+
+                        // Store the filename for download
+                        document.getElementById('downloadBtn').setAttribute('data-filename', fileName);
+                    }
+                });
+            } else {
+                document.getElementById('error-message').classList.remove('hidden');
+            }
+        }
+
+        function downloadQRCode() {
+            const qrImage = document.querySelector('#qrcode img');
+            const url = qrImage.src;
+
+            // Retrieve filename entered by user
+            const fileName = document.getElementById('downloadBtn').getAttribute('data-filename') || 'qrcode';
+
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `${fileName}.png`; // Use the filename entered by the user
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+
+</body>
+</html>
